@@ -5,7 +5,7 @@
 This pipeline provides integration from bigquery to kafka. 
 
 ### Stack
-![Java](https://img.shields.io/badge/java-%2357A143.svg?style=for-the-java&logo=docker&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%2357A143.svg?style=for-the-badge&logo=docker&logoColor=white) ![kafka](https://img.shields.io/badge/kafka-%2357A143.svg?style=for-the-badge&logo=kafka&logoColor=white) ![MQTT](https://img.shields.io/badge/mqtt-%2357A143.svg?style=for-the-badge&logo=mqtt&logoColor=white) ![Shell](https://img.shields.io/badge/shell-%2357A143.svg?style=for-the-badge&logo=shell&logoColor=white)
+![Java](https://img.shields.io/badge/java-%2357A143.svg?style=for-the-badge&logo=java&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%2357A143.svg?style=for-the-badge&logo=docker&logoColor=white) ![kafka](https://img.shields.io/badge/kafka-%2357A143.svg?style=for-the-badge&logo=kafka&logoColor=white) ![MQTT](https://img.shields.io/badge/mqtt-%2357A143.svg?style=for-the-badge&logo=mqtt&logoColor=white) ![Shell](https://img.shields.io/badge/shell-%2357A143.svg?style=for-the-badge&logo=shell&logoColor=white)
 
 ### Configs
 ```
