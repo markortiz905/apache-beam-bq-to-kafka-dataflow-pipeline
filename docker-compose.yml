@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+  dataflow_template_builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    environment:
+      - GCP_REGION
+      - GCP_PROJECT
+      - GCP_STAGING_LOCATION
+      - JDBC_TO_AVRO_LOCATION
+      - JDBC_TO_BQ_LOCATION
+      - KMS_ENC_KEY
+    volumes:
+      - ${PWD}:/app
+      - ${HOME}/.google-credentials:/.google-credentials
+      #- ${HOME}/scentregroup/workflows-deployer-dkimg/workflows-test.json:/.google-credentials

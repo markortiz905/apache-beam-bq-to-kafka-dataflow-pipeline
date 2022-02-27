@@ -1,0 +1,31 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="apache-beam-bq-kafka-pipeline [execute] Direct Runner" type="GradleRunConfiguration" factoryName="Gradle">
+    <ExternalSystemSettings>
+      <option name="env">
+        <map>
+          <entry key="APP_KAFKA_JAAS" value="org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;???&quot; password=&quot;???+vPMoSUeFvvZmOT89X8YdgVH3SYd7lTbZfwkLf3k4GG&quot;;" />
+          <entry key="APP_QUERY" value="select events AS message from `scg-udp-dw-dev`.`udp_staging_area`.`braze_publish_events_staging` where source_batch_id like 'PR-WPLUS%'" />
+          <entry key="APP_SERVER" value="pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092" />
+          <entry key="APP_TOPIC" value="braze.events.mark.test" />
+        </map>
+      </option>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value="-Pdirect-runner" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list>
+          <option value="execute" />
+        </list>
+      </option>
+      <option name="vmOptions" value="-DmainClass=com.scentregroup.beam.BigQueryToKafkaPipeline -Dexec.args=&quot;--tempLocation=gs://scg-udp-lake-dev/dataflow_temp&quot;" />
+    </ExternalSystemSettings>
+    <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+    <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+    <DebugAllEnabled>false</DebugAllEnabled>
+    <method v="2" />
+  </configuration>
+</component>

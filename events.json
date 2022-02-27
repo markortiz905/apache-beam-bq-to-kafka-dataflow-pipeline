@@ -1,0 +1,44 @@
+{
+  "events":[
+    {
+      "external_id":"73539a68-877b-4667-9f77-46d189654e73",
+      "name":"wplus_promotion_2022_win_at_westfield",
+      "time":"2022-02-07 04:25:40.823002+00",
+      "properties":{
+        "centre":"carindale"
+      }
+    },
+    {
+      "external_id":"7b659085-8ca6-4f40-b9ec-11d1aa0f31e8",
+      "name":"wplus_promotion_2022_win_at_westfield",
+      "time":"2022-02-07 02:15:07.514+00",
+      "properties":{
+        "centre":"carindale"
+      }
+    },
+    {
+      "external_id":"7e01f13f-4d30-4639-9529-112bc56618e8",
+      "name":"wplus_promotion_2022_win_at_westfield",
+      "time":"2022-02-07 00:21:28.350002+00",
+      "properties":{
+        "centre":"gardencity"
+      }
+    },
+    {
+      "external_id":"10b4b324-906f-4631-8c0f-f5c79b30e307",
+      "name":"wplus_promotion_2022_win_at_westfield",
+      "time":"2022-02-07 02:31:18.919+00",
+      "properties":{
+        "centre":"gardencity"
+      }
+    },
+    {
+      "external_id":"0bf4322f-171f-4b19-b2c3-6448ddfd497f",
+      "name":"wplus_promotion_2022_win_at_westfield",
+      "time":"2022-02-07 06:44:11.168003+00",
+      "properties":{
+        "centre":"gardencity"
+      }
+    }
+  ]
+}
