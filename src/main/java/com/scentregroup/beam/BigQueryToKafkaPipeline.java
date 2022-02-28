@@ -1,6 +1,5 @@
 package com.scentregroup.beam;
 
-import com.jayway.jsonpath.JsonPath;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.coders.SerializableCoder;
@@ -17,7 +16,6 @@ import org.apache.kafka.common.config.SslConfigs;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
