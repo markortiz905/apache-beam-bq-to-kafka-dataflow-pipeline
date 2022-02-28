@@ -5,7 +5,7 @@ steps:
   - name: ":rocket: Build Braze Events to Kafka Dataflow Template to dev"
     env:
       GCP_PROJECT: scg-udp-lake-dev
-      VAULT_ENVS: "APP_KAFKA_JAAS_SECRET:secret/gcp/scg-hip-dev/secrets/kafka/APP_KAFKA_JAAS"
+      VAULT_ENVS: "APP_KAFKA_JAAS_SECRET:secret/gcp/scg-hip-dev/secrets/sg-cp-mqtt-kafka/KAFKA_LOGIN_SECRET"
       APP_QUERY: "select events AS message from `scg-udp-dw-dev`.`udp_staging_area`.`braze_publish_events_staging` where source_batch_id like 'PR-WPLUS%'"
       APP_SERVER: "pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092"
       APP_TOPIC: "braze.events.mark.test"
