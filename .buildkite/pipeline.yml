@@ -1,5 +1,5 @@
 env:
-  GCP_REGION: asia-southeast1
+  GCP_REGION: australia-southeast1
 
 steps:
   - name: ":rocket: Build Braze Events to Kafka Dataflow Template to dev"
