@@ -1,0 +1,26 @@
+env:
+  GCP_REGION: asia-southeast1
+
+steps:
+  - name: ":rocket: Build Braze Events to Kafka Dataflow Template to dev"
+    env:
+      GCP_PROJECT: scg-udp-lake-dev
+      VAULT_ENVS: "APP_KAFKA_JAAS_SECRET:secret/gcp/scg-hip-dev/secrets/kafka/APP_KAFKA_JAAS"
+      APP_QUERY: "select events AS message from `scg-udp-dw-dev`.`udp_staging_area`.`braze_publish_events_staging` where source_batch_id like 'PR-WPLUS%'"
+      APP_SERVER: "pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092"
+      APP_TOPIC: "braze.events.mark.test"
+      BIGQUERY_TEMPLATE_LOCATION: "gs://scg-udp-lake-dev/dataflow_temp"
+      AUTOSCALING_ALGORITHM: "THROUGHPUT_BASED"
+      STAGING_LOCATION: "gs://scg-udp-lake-dev/dataflow_temp/staging"
+      TEMPLATE_LOCATION: "gs://scg-udp-lake-dev/dataflow_temp/templates/sgbeam_braze_events_to_kafka_dev"
+      SUBNETWORK: "https://www.googleapis.com/compute/v1/projects/scg-net-stg-0/regions/australia-southeast1/subnetworks/udp-etl-dev-0"
+      NETWORK: "scg-net-stg-0"
+    plugins:
+      - docker-compose#v3.3.0:
+          run: deploy_dataflow_template
+          shell: false
+          config:
+            - docker-compose.yml
+    branches: "feat* develop main IDEA*"
+    concurrency: 1
+    concurrency_group: "${ENV}-${BUILDKITE_PIPELINE_SLUG}"

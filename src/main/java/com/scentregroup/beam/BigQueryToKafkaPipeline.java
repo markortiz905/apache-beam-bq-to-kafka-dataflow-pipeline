@@ -33,7 +33,7 @@ public class BigQueryToKafkaPipeline {
         String query = System.getenv("APP_QUERY");
         String server = System.getenv("APP_SERVER");
         String topic = System.getenv("APP_TOPIC");
-        String jass = System.getenv("APP_KAFKA_JAAS");
+        String jass = System.getenv("APP_KAFKA_JAAS_SECRET");
         log.info("query: {}", query);
 
         Map<String, Object> kafkaProp = new HashMap();

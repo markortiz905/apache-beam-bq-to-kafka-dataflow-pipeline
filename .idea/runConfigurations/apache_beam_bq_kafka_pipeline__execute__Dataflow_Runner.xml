@@ -1,0 +1,31 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="apache-beam-bq-kafka-pipeline [execute] Dataflow Runner" type="GradleRunConfiguration" factoryName="Gradle">
+    <ExternalSystemSettings>
+      <option name="env">
+        <map>
+          <entry key="APP_KAFKA_JAAS" value="org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;???&quot; password=&quot;???+vPMoSUeFvvZmOT89X8YdgVH3SYd7lTbZfwkLf3k4GG&quot;;" />
+          <entry key="APP_QUERY" value="select events AS message from `scg-udp-dw-dev`.`udp_staging_area`.`braze_publish_events_staging` where source_batch_id like 'PR-WPLUS%'" />
+          <entry key="APP_SERVER" value="pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092" />
+          <entry key="APP_TOPIC" value="braze.events.mark.test" />
+        </map>
+      </option>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value="-Pdataflow-runner" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list>
+          <option value="execute" />
+        </list>
+      </option>
+      <option name="vmOptions" value="-DmainClass=com.scentregroup.beam.BigQueryToKafkaPipeline -Dexec.args=&quot;--tempLocation=gs://scg-udp-lake-dev/dataflow_temp --autoscalingAlgorithm=THROUGHPUT_BASED --runner=DataflowRunner --project=scg-udp-etl-dev --stagingLocation=gs://scg-udp-lake-dev/dataflow_temp/staging --templateLocation=gs://scg-udp-lake-dev/dataflow_temp/templates/sgbeam_braze_events_to_kafka_dev --region=australia-southeast1 --subnetwork=https://www.googleapis.com/compute/v1/projects/scg-net-stg-0/regions/australia-southeast1/subnetworks/udp-etl-dev-0 --network=scg-net-stg-0&quot;" />
+    </ExternalSystemSettings>
+    <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+    <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+    <DebugAllEnabled>false</DebugAllEnabled>
+    <method v="2" />
+  </configuration>
+</component>

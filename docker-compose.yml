@@ -1,6 +1,6 @@
 version: "3.2"
 services:
-  dataflow_template_builder:
+  deploy_dataflow_template:
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,10 +8,15 @@ services:
     environment:
       - GCP_REGION
       - GCP_PROJECT
-      - GCP_STAGING_LOCATION
-      - JDBC_TO_AVRO_LOCATION
-      - JDBC_TO_BQ_LOCATION
-      - KMS_ENC_KEY
+      - APP_QUERY
+      - APP_SERVER
+      - APP_TOPIC
+      - BIGQUERY_TEMPLATE_LOCATION
+      - AUTOSCALING_ALGORITHM
+      - STAGING_LOCATION
+      - TEMPLATE_LOCATION
+      - SUBNETWORK
+      - NETWORK
     volumes:
       - ${PWD}:/app
       - ${HOME}/.google-credentials:/.google-credentials
