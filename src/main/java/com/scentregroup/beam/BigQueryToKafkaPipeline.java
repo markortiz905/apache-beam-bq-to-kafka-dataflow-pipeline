@@ -57,7 +57,8 @@ public class BigQueryToKafkaPipeline {
                                 outputReceiver.output(message);
                             }
                         }))
-                .apply(KafkaIO.<Void, String>write()
+                .apply("Write to Kafka",
+                        KafkaIO.<Void, String>write()
                         .withBootstrapServers(server)
                         .withTopic(topic)
                         .withValueSerializer(StringSerializer.class)
