@@ -3,7 +3,7 @@
     <ExternalSystemSettings>
       <option name="env">
         <map>
-          <entry key="APP_KAFKA_JAAS_SECRET" value="org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;OFD5AO5VYV5V3KXO&quot; password=&quot;qCoZSsLIu2tveeqUxfeWY+vPMoSUeFvvZmOT89X8YdgVH3SYd7lTbZfwkLf3k4GG&quot;;" />
+          <entry key="APP_KAFKA_JAAS_SECRET" value="org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;???&quot; password=&quot;???&quot;;" />
           <entry key="APP_QUERY" value="with base as ( select events, cast(floor(row_number() over() /75) as int64) as row_bucket from `scg-udp-dw-dev.udp_staging_area.braze_publish_events_staging` i where source_batch_id like 'PR-WPLUS%' ) select concat('{&quot;events&quot;:[',string_agg(events),']}') as message from base group by row_bucket;" />
           <entry key="APP_SERVER" value="pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092" />
           <entry key="APP_TOPIC" value="braze.events.mark.test" />
