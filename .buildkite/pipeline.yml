@@ -17,8 +17,8 @@ steps:
       NETWORK: "scg-net-stg-0"
     plugins:
       - docker-compose#v3.3.0:
+          propagate-uid-gid: true
           run: deploy_dataflow_template
-          shell: false
           config:
             - docker-compose.yml
     branches: "feat* develop main IDEA*"
