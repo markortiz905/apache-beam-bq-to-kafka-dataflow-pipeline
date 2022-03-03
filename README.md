@@ -9,7 +9,7 @@ This pipeline provides integration from bigquery to kafka.
 
 ### Configs
 ```
-KAFKA_MQTT_BOOTSTRAP_SERVERS: pkc-4vndj.australia-southeast1.gcp.confluent.cloud:9092
+KAFKA_MQTT_BOOTSTRAP_SERVERS: ***.australia-southeast1.gcp.confluent.cloud:9092
 KAFKA_MQTT_PRODUCER_SECURITY_PROTOCOL: SASL_SSL
 KAFKA_MQTT_PRODUCER_SASL_MECHANISM: PLAIN
 KAFKA_MQTT_PRODUCER_SASL_JAAS_CONFIG: org.apache.kafka.common.security.plain.PlainLoginModule required username="**" password="**";
