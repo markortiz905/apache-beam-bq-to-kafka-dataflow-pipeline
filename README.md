@@ -1,4 +1,3 @@
-[![Build status](https://badge.buildkite.com/b5e100ec73a04a809861da57daba7834e7cc6a29f34ed1181c.svg)](https://buildkite.com/scentregroup/sg-cp-kafka-mqtt)
 
 ## 🍀 Apache Beam Bigquery To Kafka Pipeline
 
